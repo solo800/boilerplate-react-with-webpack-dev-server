@@ -1,5 +1,6 @@
 import React from 'react';
 import Paragraph from '../paragraph/Paragraph.jsx';
+import styles from './app.scss';
 
 export default class App extends React.Component {
     constructor (props) {
@@ -21,7 +22,7 @@ export default class App extends React.Component {
     render () {
         return (
             <div>
-                <h1>Hello my friends!</h1>
+                <h1 className={styles.text}>Hello my friends!</h1>
                 <Paragraph
                     text='The current time is' time={this.state.time}
                     updateTime={this.clickHandler.bind(this)}
